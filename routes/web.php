@@ -34,6 +34,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'redirectAdmin'], function ()
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard' , [AdminController::class, 'index'])->name('admin.dashboard');
+
+
+
+    // products route
+    Route::get('/products', [ProductController::class , 'index'])->name('admin.product.index');
 });
 
 require __DIR__ . '/auth.php';
