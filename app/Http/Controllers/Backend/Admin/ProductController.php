@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\Backend\Admin;
 
-use App\Http\Controllers\Controller;
 use Inertia\Inertia;
+use App\Models\Product;
+use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Admin/Product/Index');
+        $prouduct = Product::get();
+        return Inertia::render('Admin/Product/Index' , ['products' => $prouduct]);
     }
 }
