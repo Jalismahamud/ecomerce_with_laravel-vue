@@ -19,6 +19,7 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
+        "element-plus": "^2.13.1",
         "flowbite": "^4.0.1"
     }
 }
